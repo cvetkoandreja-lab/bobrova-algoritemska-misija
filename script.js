@@ -39,7 +39,7 @@ const challenges = [
       "Naprej 3 → Levo → Naprej 1 → Desno → Naprej 1",
       "Naprej 1 → Desno → Naprej 1 → Levo → Naprej 3"
     ],
-    correct: 1,
+    correct: 3,
     hint: "Najprej preverite, koliko kvadratkov se avto premakne naravnost.",
     explanation: "Pravilen je program B, ker sledi narisani poti.",
     letter: "L"
