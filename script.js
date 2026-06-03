@@ -14,23 +14,22 @@
 */
 
 const challenges = [
-  {
-    title: "Zastavice",
-    type: "Zaporedje in vzorci",
-    image: "images/kartica-03.png",
-    imageAlt: "Kartica Zastavice",
-    question: "Oglejte si vzorec zastavic. Katera zastavica pride naslednja?",
-    options: [
-      "Odgovor A",
-      "Odgovor B",
-      "Odgovor C",
-      "Odgovor D"
-    ],
-    correct: 0,
-    hint: "Poiščite del zaporedja, ki se ponavlja.",
-    explanation: "Pri zaporedjih najprej poiščemo najkrajši ponavljajoči se vzorec in ga nadaljujemo.",
-    letter: "A"
-  },
+{
+  title: "Zastavice",
+  type: "Zaporedje in vzorci",
+  image: "images/kartica-03.png",
+  question: "Oglejte si vzorec zastavic. Katera zastavica pride naslednja?",
+  labels: ["1", "2", "3"],
+  options: [
+    "Možnost 1",
+    "Možnost 2",
+    "Možnost 3"
+  ],
+  correct: 0,
+  hint: "Poišči najkrajši del vzorca, ki se ponavlja.",
+  explanation: "Naslednja je zastavica številka 1.",
+  letter: "A"
+}
   {
     title: "Robot usmerja avto",
     type: "Ukazi robota",
@@ -180,7 +179,7 @@ function renderChallenge() {
     label.className = "answer";
     label.innerHTML = `
       <input type="radio" name="answer" value="${index}">
-      <span><strong>${String.fromCharCode(65 + index)}.</strong> ${option}</span>
+     <span><strong>${ch.labels ? ch.labels[index] : String.fromCharCode(65 + index)}.</strong> ${option}</span>
     `;
     answerForm.appendChild(label);
   });
