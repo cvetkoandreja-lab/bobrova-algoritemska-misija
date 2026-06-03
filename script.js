@@ -41,7 +41,7 @@ const challenges = [
     ],
     correct: 3,
     hint: "Najprej preverite, koliko kvadratkov se avto premakne naravnost.",
-    explanation: "Pravilen je program B, ker sledi narisani poti.",
+    explanation: "Pravilen je program D, ker sledi narisani poti.",
     letter: "L"
   },
   {
