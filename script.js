@@ -159,6 +159,7 @@ unlockBtn.addEventListener("click", unlockFinal);
 
 function renderChallenge() {
   const ch = challenges[current];
+
   progressText.textContent = `${current + 1} / ${challenges.length}`;
   letters.textContent = collectedLetters.length ? collectedLetters.join(" ") : "—";
 
@@ -172,16 +173,21 @@ function renderChallenge() {
   }
 
   challengeBody.innerHTML = `<div class="challenge-box"><p>${ch.question}</p></div>`;
+
   answerForm.innerHTML = "";
 
   ch.options.forEach((option, index) => {
-    const label = document.createElement("label");
-    label.className = "answer";
-    label.innerHTML = `
+    const answerLabel = document.createElement("label");
+    answerLabel.className = "answer";
+
+    const oznaka = ch.labels ? ch.labels[index] : String.fromCharCode(65 + index);
+
+    answerLabel.innerHTML = `
       <input type="radio" name="answer" value="${index}">
-     <span><strong>${ch.labels ? ch.labels[index] : String.fromCharCode(65 + index)}.</strong> ${option}</span>
+      <span><strong>${oznaka}.</strong> ${option}</span>
     `;
-    answerForm.appendChild(label);
+
+    answerForm.appendChild(answerLabel);
   });
 
   clearFeedback();
