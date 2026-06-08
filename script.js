@@ -165,9 +165,9 @@ const allChallenges = [
       "2, 3, 7, 8 in 11",
       "vsa debla"
     ],
-    "correct": 0,
-    "hint": "Za streho uporabi deblo, če je daljše od debla na njegovi desni.",
-    "explanation": "Za streho bo uporabil debla 3, 4, 5, 8 in 9, ker so daljša od debla takoj na njihovi desni."
+    "correct": 2,
+    "hint": "Za streho uporabi deblo, če je daljše od debla takoj na njegovi desni.",
+    "explanation": "Za streho bo uporabil debla 2, 3, 7, 8 in 11."
   },
   {
     "title": "Preberi besede",
@@ -207,22 +207,22 @@ const allChallenges = [
     "hint": "Pazi, da znak 3 skupaj s kamnom pomeni ukaz: položi 3 kamne. Poišči program, kjer se na isto ploščo položi 1 kamen in nato še 3 kamni.",
     "explanation": "Pravilen je program B. Robot na isto ploščo položi 1 kamen in nato še 3 kamne, zato nastane stolp iz 4 kamnov."
   },
-  {
-    "title": "Robot hrošč",
-    "type": "Sledenje puščicam",
-    "image": "images/kartica-12.png",
-    "imageAlt": "Kartica Robot hrošč",
-    "question": "S katerega vhoda lahko robot doseže cilj?",
-    "options": [
-      "Samo z vhoda 1",
-      "Z vhoda 2 ali vhoda 4",
-      "Samo z vhoda 3",
-      "Z nobenega vhoda"
-    ],
-    "correct": 1,
-    "hint": "Sledi puščicam. Število puščic pove, za koliko kvadratov se robot premakne.",
-    "explanation": "Robot lahko cilj doseže z vhoda 2 ali vhoda 4."
-  },
+ {
+  "title": "Robot hrošč",
+  "type": "Sledenje puščicam",
+  "image": "images/kartica-12.png",
+  "imageAlt": "Kartica Robot hrošč",
+  "question": "S katerega vhoda lahko robot doseže cilj?",
+  "options": [
+    "Vhod 1",
+    "Vhod 2",
+    "Vhod 3",
+    "Vhod 4"
+  ],
+  "correct": 3,
+  "hint": "Sledi puščicam od vsakega vhoda posebej. Robot se premika v smeri puščice za toliko polj, kolikor puščic je na polju, kjer stoji.",
+  "explanation": "Robot doseže cilj samo, če začne pri vhodu 4."
+},
   {
     "title": "Izbira tira",
     "type": "Odločanje na razcepih",
@@ -260,9 +260,9 @@ const allChallenges = [
       "F",
       "G"
     ],
-    "correct": 1,
-    "hint": "Mačka gre naprej in zavije na vsakem drugem križišču. Začni šteti pri prvem križišču, na katerega pride.",
-    "explanation": "Mačka pride do črke B.",
+    "correct": 3,
+    "hint": "Sledi poti mačke. Na prvem križišču zavije, na naslednjem nadaljuje naravnost, nato spet zavije.",
+    "explanation": "Mačka pride do črke D.",
     "labels": [
       "A",
       "B",
@@ -441,9 +441,9 @@ const allChallenges = [
       "Zaporedje C",
       "Zaporedje D"
     ],
-    "correct": 3,
+    "correct": 0,
     "hint": "Primerjaj vsako črko posebej: B, E, B, R, A, S. Med črkami so premori.",
-    "explanation": "Pravilno je zaporedje D, ker ustreza zapisu BEBRAS."
+    "explanation": "Pravilno je zaporedje A, ker ustreza zapisu BEBRAS."
   },
   {
     "title": "Najdi napako",
