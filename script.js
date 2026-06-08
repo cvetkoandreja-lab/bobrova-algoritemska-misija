@@ -538,7 +538,10 @@ function resetGame() {
   finalFeedback.textContent = "";
 
   challenges = pickRandomChallenges(allChallenges, lettersForPassword.length);
-  assignLetters(challenges, lettersForPassword);
+
+const shuffledLetters = [...lettersForPassword];
+shuffleArray(shuffledLetters);
+assignLetters(challenges, shuffledLetters);
 }
 
 function pickRandomChallenges(source, count) {
